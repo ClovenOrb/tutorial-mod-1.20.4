@@ -1,7 +1,9 @@
 package net.clover.tutorial.item;
 
 import net.clover.tutorial.TutorialMod;
+import net.clover.tutorial.block.ModBlocks;
 import net.clover.tutorial.item.custom.MetalDetectorItem;
+import net.clover.tutorial.item.custom.ModArmorItem;
 import net.clover.tutorial.item.custom.ModFoodComponents;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -37,6 +39,18 @@ public class ModItems {
             new ShovelItem(ModToolMaterial.RUBY, 0, 0f, new FabricItemSettings()));
     public static final Item RUBY_SWORD = registerItem("ruby_sword",
             new SwordItem(ModToolMaterial.RUBY, 3, 3f, new FabricItemSettings()));
+
+    public static final Item RUBY_HELMET = registerItem("ruby_helmet",
+            new ModArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item RUBY_CHESTPLATE = registerItem("ruby_chestplate",
+            new ArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
+    public static final Item RUBY_LEGGINGS = registerItem("ruby_leggings",
+            new ArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
+    public static final Item RUBY_BOOTS = registerItem("ruby_boots",
+            new ArmorItem(ModArmorMaterials.RUBY, ArmorItem.Type.BOOTS, new FabricItemSettings()));
+
+    public static final Item TOMATO_SEEDS = registerItem("tomato_seeds",
+            new AliasedBlockItem(ModBlocks.TOMATO_CROP, new FabricItemSettings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries){
         entries.add(RUBY);

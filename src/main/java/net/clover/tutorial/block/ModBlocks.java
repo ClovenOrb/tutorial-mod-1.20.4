@@ -2,6 +2,7 @@ package net.clover.tutorial.block;
 
 import net.clover.tutorial.TutorialMod;
 import net.clover.tutorial.block.custom.SoundBlock;
+import net.clover.tutorial.block.custom.TomatoCropBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -52,6 +53,9 @@ public class ModBlocks {
             new DoorBlock(BlockSetType.IRON, FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
     public static final Block RUBY_TRAPDOOR = registerBlock("ruby_trapdoor",
             new TrapdoorBlock(BlockSetType.IRON, FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+
+    public static final Block TOMATO_CROP = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "tomato_crop"),
+            new TomatoCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

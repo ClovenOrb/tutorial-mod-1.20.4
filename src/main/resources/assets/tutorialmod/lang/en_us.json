@@ -9,6 +9,10 @@
 
   "itemgroup.ruby": "Ruby Tutorial Group",
 
+  "entity.minecraft.villager.sound_master": "Soundmaster",
+
+  "block.tutorialmod.dahlia": "Dahlia",
+
   "block.tutorialmod.ruby_block": "Ruby Block",
   "block.tutorialmod.raw_ruby_block": "Raw Ruby Block",
   "block.tutorialmod.sound_block": "Sound Block",
@@ -18,6 +22,9 @@
   "item.tutorialmod.ruby_shovel": "Ruby Shovel",
   "item.tutorialmod.ruby_hoe": "Ruby Hoe",
   "item.tutorialmod.ruby_axe": "Ruby Axe",
+
+  "item.tutorialmod.corn": "Corn",
+  "item.tutorialmod.corn_seeds": "Corn Seeds",
 
   "item.tutorialmod.ruby_helmet": "Ruby Helmet",
   "item.tutorialmod.ruby_chestplate": "Ruby Chestplate",
@@ -40,5 +47,15 @@
   "block.tutorialmod.ruby_trapdoor": "Ruby Trapdoor",
 
   "tooltip.tutorialmod.metal_detector.tooltip": "Finds buried iron and diamonds",
-  "tooltip.tutorialmod.sound_block.tooltip": "Plays sound when right clicked"
+  "tooltip.tutorialmod.sound_block.tooltip": "Plays sound when right clicked",
+
+  "sounds.tutorialmod.metal_detector_found_ore": "Metal Detector Jingle",
+
+  "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.tutorialmod.bar_brawl_music_disc.desc": "Bryan Tec - Bar Brawl (CC0)",
+
+  "item.tutorialmod.porcupine_spawn_egg": "Porcupine Spawn Egg",
+
+  "block.tutorialmod.gem_polishing_station": "Gem Polishing Station",
+  "block.tutorialmod.gem_polishing_station.display_name": "Gem Polishing Station",
 }

@@ -48,20 +48,7 @@ public class ModLootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            /*if(SUSPICIOUS_SAND_ID.equals(id)){
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .with(ItemEntry.builder(ModItems.METAL_DETECTOR));
-                tableBuilder.pool(poolBuilder.build());*
-            }*/
             //Suspicious sand is fucked. Waiting until further into tutorial to fix
         });
-
-        /*LootTableEvents.REPLACE.register((resourceManager, lootManager, id, original, source) -> {
-            if(SUSPICIOUS_SAND_ID.equals(id)){
-                List<LootPoolEntry> entries = new ArrayList<>(Arrays.asList(original.pools[0].entries));
-            }
-
-            return null;
-        });*/
     }
 }

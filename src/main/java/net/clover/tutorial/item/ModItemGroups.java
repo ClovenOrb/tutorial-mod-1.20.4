@@ -19,7 +19,6 @@ public class ModItemGroups {
                         entries.add(ModItems.RUBY);
                         entries.add(ModItems.RAW_RUBY);
                         entries.add(ModItems.METAL_DETECTOR);
-                        entries.add(ModItems.TOMATO);
                         entries.add(ModItems.COAL_BRIQUETTE);
 
                         entries.add(ModItems.RUBY_HOE);
@@ -56,7 +55,19 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RUBY_TRAPDOOR);
 
                         entries.add(ModItems.RUBY_STAFF);
+
                         entries.add(ModItems.TOMATO_SEEDS);
+                        entries.add(ModItems.TOMATO);
+
+                        entries.add(ModItems.CORN);
+                        entries.add(ModItems.CORN_SEEDS);
+
+                        entries.add(ModBlocks.DAHLIA);
+
+                        entries.add(ModItems.BAR_BRAWL_MUSIC_DISC);
+
+                        entries.add(ModItems.PORCUPINE_SPAWN_EGG);
+                        entries.add(ModBlocks.GEM_POLISHING_STATION);
                     }).build());
 
     public static void registerItemGroups(){

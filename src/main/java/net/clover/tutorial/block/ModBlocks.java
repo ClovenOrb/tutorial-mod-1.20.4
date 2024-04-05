@@ -1,11 +1,15 @@
 package net.clover.tutorial.block;
 
 import net.clover.tutorial.TutorialMod;
+import net.clover.tutorial.block.custom.CornCropBlock;
+import net.clover.tutorial.block.custom.GemPolishingStationBlock;
 import net.clover.tutorial.block.custom.SoundBlock;
 import net.clover.tutorial.block.custom.TomatoCropBlock;
+import net.clover.tutorial.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -30,7 +34,7 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(2, 5), FabricBlockSettings.copyOf(Blocks.END_STONE).strength(3.5f)));
 
     public static final Block SOUND_BLOCK = registerBlock("sound_block",
-            new SoundBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(Blocks.IRON_BLOCK.getHardness())));
+            new SoundBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK).hardness(Blocks.IRON_BLOCK.getHardness()).sounds(ModSounds.SOUND_BLOCK_SOUNDS)));
 
     public static final Block RUBY_STAIRS = registerBlock("ruby_stairs",
             new StairsBlock(ModBlocks.RUBY_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
@@ -56,6 +60,18 @@ public class ModBlocks {
 
     public static final Block TOMATO_CROP = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "tomato_crop"),
             new TomatoCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block CORN_CROP = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "corn_crop"),
+            new CornCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    public static final Block DAHLIA = registerBlock("dahlia",
+            new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 10, FabricBlockSettings.copyOf(Blocks.ALLIUM).nonOpaque().noCollision()));
+    public static final Block POTTED_DAHLIA = Registry.register(Registries.BLOCK, new Identifier(TutorialMod.MOD_ID, "potted_dahlia"),
+            new FlowerPotBlock(DAHLIA, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM).nonOpaque()));
+
+    public static final Block GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
+            new GemPolishingStationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
